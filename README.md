@@ -36,10 +36,23 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 Description: Fetches all the questions along with the options and correct answers.
 Response: A JSON array of questions.
 
+[
+  {
+    "id": 1,
+    "question": "How do you judge what should be added in the next version of the app?",
+    "options": ["Data Analysis", "User Feedback", "Copy from a similar product", "Make a questionnaire", "Personal feeling"],
+    "correctAnswer": "User Feedback"
+  },
+  ...
+]
+
+
 ## POST /api/quiz
 
 Description: Submits the user's answers and calculates their score.
+
 Request Body: { "questionId": 1, "selectedChoices": ["User Feedback"], "timeTaken": 120 }
+
 Response: Returns the updated score and the total number of questions.
 
 # Docker Setup
@@ -69,11 +82,16 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 # Code Quality & Best Practices
 Clean Code: The code is written with readability and maintainability in mind. Comments and documentation are provided where necessary.
+
 Component-Based Design: The app is split into reusable components.
+
 State Management: Uses React’s built-in state management with hooks (useState, useEffect).
+
 RESTful API Design: The API follows REST principles for data fetching and submission.
 
 # Acknowledgments
 Next.js for providing the framework.
+
 Tailwind CSS for styling.
+
 Vercel for seamless deployment.
