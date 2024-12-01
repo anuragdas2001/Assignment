@@ -75,7 +75,7 @@ export function Track({ currentQuestion, onNext, totalQuestion }) {
     setSelectedOptions([]); // Clear selected options
     setCorrectAnswerStatus({}); // Reset correct/incorrect status
   }, [currentQuestion]);
-
+  console.log(currentQuestion)
   return (
     <div className="relative">
       <div className="bg-[#FFFFFF] h-32 w-32 sm:h-64 sm:w-64 flex justify-center items-center rounded-full absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
@@ -84,10 +84,12 @@ export function Track({ currentQuestion, onNext, totalQuestion }) {
       <div className="bg-[#FFFFFF] rounded-t-3xl relative mt-20 w-auto h-screen">
         <div className="flex flex-col justify-center items-center">
           {/* Display question */}
-          <div className="text-center p-5 mt-40 font-semibold text-xl">
+          <div className="text-center p-5 mt-28 font-semibold text-xl">
             {currentQuestion.question}
           </div>
-
+          <div className="">
+            <img src={currentQuestion?.image} className="object-cover h-auto w-auto" alt="image not loaded" />
+          </div>
           {/* Display options */}
           {currentQuestion.options.map((option, index) => {
             const isSelected = selectedOptions.includes(option);
@@ -96,7 +98,7 @@ export function Track({ currentQuestion, onNext, totalQuestion }) {
             return (
               <div
                 key={index}
-                className={`flex justify-start items-center m-5 px-2 h-20 w-10/12 rounded-2xl bg-[#F3F4FA] ${
+                className={`flex justify-start items-center mt-5 px-2 h-20 w-10/12 rounded-2xl bg-[#F3F4FA] ${
                   isSelected
                     ? isCorrectAnswer
                       ? "border-2 border-[#44B77B]" // Green border for correct selection

@@ -25,7 +25,7 @@ const questions = [
       "Maintenance",
       "Requirement Gathering",
     ],
-    image: "../../assets/image 1.png",
+    image: "https://res.cloudinary.com/dgz1duuwu/image/upload/v1733063546/assignment/nuhot4ebqzc84cgujof7.png",
     correctAnswer: "Implementation",
   },
   {

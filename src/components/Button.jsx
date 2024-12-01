@@ -6,7 +6,7 @@ export function Button({ label, onClick }) {
       onClick={onClick}
       className="h-14 fixed bottom-0 p-5 w-10/12 sm:w-4/12  bg-[#FF3B3F] mb-5 rounded-full text-white nunito font-black text-3xl flex items-center justify-center"
     >
-      <span className="flex-grow text-center">
+      <span className="flex-grow text-center nunito-italic-normal-900">
         {label}
       </span>
       {label === "Next" && (
